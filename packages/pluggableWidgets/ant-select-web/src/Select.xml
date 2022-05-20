@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.select.Select" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Select</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="数据源">
+            <propertyGroup caption="搜索值">
+                <property key="searchValue" type="attribute" required="true">
+                    <caption>搜索值</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="待选">
+                <property key="options" type="datasource" required="true" isList="true">
+                    <caption>待选项数据源</caption>
+                    <description></description>
+                </property>
+                <property key="optionValue" type="attribute" required="true" dataSource="options">
+                    <caption>选项值</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                        <attributeType name="Integer" />
+                    </attributeTypes>
+                </property>
+                <property key="optionLabel" type="attribute" required="true" dataSource="options">
+                    <caption>选项标签</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="已选">
+                <property key="selectList" type="datasource" required="false" isList="true">
+                    <caption>已选项数据源</caption>
+                    <description></description>
+                </property>
+                <property key="optionValueM" type="attribute" required="false" dataSource="selectList">
+                    <caption>选项值</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                        <attributeType name="Integer" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="常规">
+            <propertyGroup caption="常规">
+                <property key="value" type="attribute" required="false">
+                    <caption>所选值</caption>
+                    <description>选中选项后会把值赋值到此属性</description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="事件">
+                <property key="onSelect" type="action" dataSource="options">
+                    <caption>被选中</caption>
+                    <description></description>
+                </property>
+                <property key="onDeselect" type="action" dataSource="options">
+                    <caption>取消选中</caption>
+                    <description></description>
+                </property>
+                <property key="onDeselectM" type="action" dataSource="selectList">
+                    <caption>取消选中</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="高级">
+            <propertyGroup caption="多选">
+                <property key="isMultiConst" type="boolean" defaultValue="false">
+                    <caption>多选</caption>
+                    <description></description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="即时创建">
+                <property key="onCreate" type="action">
+                    <caption>即时创建</caption>
+                    <description>即时创建一个不存在的选项</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.unity.Unity" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Unity</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="unityModelPath" type="string" required="false" multiline="false">
+                <caption>unity webgl path</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Behavior">
+            <propertyGroup caption="输出">
+                <property key="out1" type="attribute" required="false">
+                    <caption>输出1</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="高级">
+            <property key="hoverGameObject" type="string" required="false" multiline="false">
+                <caption>hover game object</caption>
+                <description></description>
+            </property>
+            <property defaultValue="ChangeHover" key="hoverMethod" type="string" required="false" multiline="false">
+                <caption>hover method name</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

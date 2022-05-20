@@ -9,8 +9,8 @@
 1. Clone this repository
 
 ```sh
-$ git clone --recursive https://github.com/mendix/widgets-resources.git
-$ cd widgets-resources
+$ git clone --recursive https://github.com/mendixCN/widgets-resources-cn.git
+$ cd widgets-resources-cn
 ```
 
 2. Install and link dependencies

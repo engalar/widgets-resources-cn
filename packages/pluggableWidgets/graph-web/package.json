@@ -1,7 +1,7 @@
 {
   "name": "graph-web",
   "widgetName": "Graph",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Grap svg drawer",
   "copyright": "2020 Mendix Technology BV",
   "author": "John",
@@ -9,11 +9,11 @@
     "node": ">=12"
   },
   "config": {
-    "projectPath": "../../../testProject/",
+    "projectPath": "C:/d/repo/testProject",
     "mendixHost": "http://localhost:8080",
     "developmentPort": "3000"
   },
-  "packagePath": "mendix",
+  "packagePath": "mendixcn",
   "scripts": {
     "start": "pluggable-widgets-tools start:web",
     "build": "pluggable-widgets-tools build:web",
@@ -27,13 +27,15 @@
     "@mendix/pluggable-widgets-tools": "^9.0.0",
     "@types/big.js": "^6.0.2",
     "@types/classnames": "^2.2.4",
+    "@types/lodash-es": "^4.17.5",
     "@types/react": "~17.0.1",
     "@types/react-dom": "~17.0.1"
   },
   "dependencies": {
-    "@antv/x6": "^1.25.3",
-    "antd": "^4.16.11",
+    "@antv/g6": "^4.3.11",
+    "lodash-es": "^4.17.21",
     "@mendix-cn/piw-utils-internal": "^1.0.0",
+    "ahooks": "^2.10.12",
     "classnames": "^2.2.6"
   }
 }

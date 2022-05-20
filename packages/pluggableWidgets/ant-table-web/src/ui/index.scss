@@ -1,0 +1,5 @@
+@import "../../node_modules/antd/dist/antd";
+.ant-table-web {
+    @import "./Table.scss";
+    @import "./virtual-table";
+}
